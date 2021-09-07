@@ -5,10 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Demo_1_Vorontsov_N_A_3802"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Попрыжонок" Height="450" Width="800">
     <Grid>
-        <Frame>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height=".3*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#F9969E">
+        </Rectangle>
+        <Image Grid.Row="0" Source="./img/Попрыженок.ico" HorizontalAlignment="Left"></Image>
+        <TextBlock Grid.Row="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontFamily="Comic Sans MS">Попрыжонок</TextBlock> 
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden">
             
         </Frame>
+        <Rectangle Grid.Row="2" Fill="#F9969E"/>
     </Grid>
 </Window>

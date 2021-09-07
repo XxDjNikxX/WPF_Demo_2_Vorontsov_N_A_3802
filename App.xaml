@@ -4,12 +4,16 @@
              xmlns:local="clr-namespace:WPF_Demo_1_Vorontsov_N_A_3802"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style>
-            <Setter>
-                <Setter.Property>
-                    <
-                </Setter.Property>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            <Style x:Key="FontComicSansWindow" TargetType="Window">
+                <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style x:Key="FontComicSansPage" TargetType="Window">
+                <Setter Property="FontFamily" Value="Comic Sans MS"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>
