@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Demo_1_Vorontsov_N_A_3802"
         mc:Ignorable="d"
-        Title="Попрыжонок" Height="450" Width="800">
+        Title="Попрыжонок" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".3*"/>

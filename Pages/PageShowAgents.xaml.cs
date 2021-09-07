@@ -24,5 +24,11 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802.Pages
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            dbAgents.ItemsSource =  DBModel.DB.Agent.ToList();
+
+        }
     }
 }
