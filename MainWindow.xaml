@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:WPF_Demo_1_Vorontsov_N_A_3802"
         xmlns:Icon="/img/Попрыжонок.ico"
         mc:Ignorable="d"
-        Title="Попрыжонок" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Попрыжонок" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".2*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".2*"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Fill="#F9969E">
         </Rectangle>

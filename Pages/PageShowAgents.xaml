@@ -9,13 +9,53 @@
       Title="PageShowAgents" FontFamily="Comic Sans MS" Loaded="Page_Loaded">
 
     <Grid>
-
-        <ScrollViewer>
-            <DataGridTextColumn Header="№п/п" Binding="{Binding ID}"/>
-            <DataGridTextColumn Header="Тип Агента" Binding="{Binding AgentType}"/>
-            <DataGridTextColumn Header="Наименование" Binding="{Binding Title}"/>
-            <DataGridTextColumn Header="Номер Телефона" Binding="{Binding Phone}"/>
-            <DataGridTextColumn Header="Приоритетность" Binding="{Binding Priority}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" >
+            <TextBox Width="250" Height="25" Name="tbSearch" BorderBrush="Black" Margin="20,0" TextChanged="tbSearch_TextChanged"/>
+            <ComboBox Width="150" Height="25" Name="cbSort" Margin="30,0,20,0" BorderBrush="Black"/>
+            <ComboBox Width="150" Height="25" Margin="20,0" Name="cbFilter" BorderBrush="Black"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <ListBox Name="lbAgents">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Grid.Row="1">
+                            <Border BorderBrush="Black" BorderThickness="1.5" Width="800" Margin="0,10,0,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".5*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width=".3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border BorderThickness="2" BorderBrush="Black">
+                                        <Image Source="{Binding Logo}" Grid.Column="0" Width="250" Height="150" />
+                                    </Border>
+                                    <StackPanel Grid.Column="1" Margin="20,20">
+                                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                                            <TextBlock Text="{Binding AgentType.Title}"></TextBlock>
+                                            <TextBlock Text="|"/>
+                                            <TextBlock Text="{Binding Title}"></TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0,20">
+                                            <TextBlock Text="10 продаж за год"/>
+                                            <TextBlock Text="{Binding Phone}"/>
+                                            <StackPanel Orientation="Horizontal" Margin="0,20">
+                                                <TextBlock Text="Приоритетность:"/>
+                                                <TextBlock Text="{Binding Priority}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <TextBlock Grid.Column="2" Text="10%" HorizontalAlignment="Center" Name="tbPercent" VerticalAlignment="Center" FontSize="25"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </ScrollViewer>
+       
     </Grid>
 </Page>
