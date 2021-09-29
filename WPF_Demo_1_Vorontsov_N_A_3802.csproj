@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Попрыженок.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -75,6 +78,7 @@
     </Compile>
     <Compile Include="Classes\Agent.cs" />
     <Compile Include="Classes\AgentType.cs" />
+    <Compile Include="Classes\DBModel.cs" />
     <Compile Include="Material.cs">
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
@@ -84,12 +88,21 @@
     <Compile Include="MaterialType.cs">
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelAgents.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAgents.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelAgents.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelAgents.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DBModel.cs" />
+    <Compile Include="ModelAgents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAgents.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageShowAgents.xaml.cs">
       <DependentUpon>PageShowAgents.xaml</DependentUpon>
     </Compile>
@@ -132,16 +145,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelAgents.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAgents.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelAgents.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAgents.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -176,6 +179,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Попрыженок.ico" />
     <Resource Include="agents\agent_1.png" />
     <Resource Include="agents\agent_10.png" />
     <Resource Include="agents\agent_100.png" />
@@ -309,10 +313,15 @@
     <Resource Include="img\Попрыженок.ico" />
     <Resource Include="img\Попрыженок.png" />
     <Resource Include="img\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="ModelAgents.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelAgents.Context.cs</LastGenOutput>
       <DependentUpon>ModelAgents.edmx</DependentUpon>
+      <LastGenOutput>ModelAgents.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ModelAgents.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -320,9 +329,5 @@
       <LastGenOutput>ModelAgents.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

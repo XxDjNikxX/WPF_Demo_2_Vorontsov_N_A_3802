@@ -13,10 +13,10 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WorldSkills_First_DemoEntities : DbContext
+    public partial class AgentsEntites : DbContext
     {
-        public WorldSkills_First_DemoEntities()
-            : base("name=WorldSkills_First_DemoEntities")
+        public AgentsEntites()
+            : base("name=AgentsEntites")
         {
         }
     

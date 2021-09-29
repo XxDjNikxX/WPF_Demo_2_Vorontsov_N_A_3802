@@ -8,6 +8,6 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802
 {
     static class DBModel
     {
-        public static WorldSkills_First_DemoEntities DB = new WorldSkills_First_DemoEntities();
+        public static AgentsEntites DB = new AgentsEntites();
     }
 }

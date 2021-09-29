@@ -9,41 +9,13 @@
       Title="PageShowAgents" FontFamily="Comic Sans MS" Loaded="Page_Loaded">
 
     <Grid>
-       
+
         <ScrollViewer>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
-                <StackPanel Orientation="Horizontal">
-                    <TextBox Width="200" Margin="20,20" HorizontalAlignment="Left" Height="25" Name="tbSearch"></TextBox>
-                    <ComboBox Name="cbSort" Width="150" Height="25"/>
-                    <ComboBox Name="cbFilter" Width="150" Margin="20,0" Height="25"/>
-                </StackPanel>
-                <DataGrid Name="dbAgents">
-                    <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="Изображение">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Image Source="{Binding Logo}" Height="25" Width="25"/>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="№п/п" Binding="{Binding ID}"/>
-                        <DataGridTextColumn Header="Тип Агента" Binding="{Binding AgentType}"/>
-                        <DataGridTextColumn Header="Наименование" Binding="{Binding Title}"/>
-                        <DataGridTextColumn Header="Номер Телефона" Binding="{Binding Phone}"/>
-                        <DataGridTextColumn Header="Приоритетность" Binding="{Binding Priority}"/>
-                        <DataGridTemplateColumn Header="Действия">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Vertical">
-                                        <Button>Удалить</Button>
-                                        <Button> Изменить</Button>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </StackPanel>
+            <DataGridTextColumn Header="№п/п" Binding="{Binding ID}"/>
+            <DataGridTextColumn Header="Тип Агента" Binding="{Binding AgentType}"/>
+            <DataGridTextColumn Header="Наименование" Binding="{Binding Title}"/>
+            <DataGridTextColumn Header="Номер Телефона" Binding="{Binding Phone}"/>
+            <DataGridTextColumn Header="Приоритетность" Binding="{Binding Priority}"/>
         </ScrollViewer>
     </Grid>
 </Page>

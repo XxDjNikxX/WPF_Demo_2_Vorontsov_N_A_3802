@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище WorldSkills_First_DemoModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище AgentsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agent">
           <Key>
             <PropertyRef Name="ID" />
@@ -304,7 +304,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище WorldSkills_First_DemoModelContainer">
+        <EntityContainer Name="Хранилище AgentsModelContainer">
           <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AgentPriorityHistory" EntityType="Self.AgentPriorityHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AgentType" EntityType="Self.AgentType" Schema="dbo" store:Type="Tables" />
@@ -376,7 +376,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="WorldSkills_First_DemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AgentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Agent">
           <Key>
             <PropertyRef Name="ID" />
@@ -672,7 +672,7 @@
           <End Role="Material" Type="Self.Material" Multiplicity="*" />
           <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="WorldSkills_First_DemoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AgentsEntites" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Agent" EntityType="Self.Agent" />
           <EntitySet Name="AgentPriorityHistory" EntityType="Self.AgentPriorityHistory" />
           <EntitySet Name="AgentType" EntityType="Self.AgentType" />
@@ -740,9 +740,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище WorldSkills_First_DemoModelContainer" CdmEntityContainer="WorldSkills_First_DemoEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище AgentsModelContainer" CdmEntityContainer="AgentsEntites">
           <EntitySetMapping Name="Agent">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.Agent">
+            <EntityTypeMapping TypeName="AgentsModel.Agent">
               <MappingFragment StoreEntitySet="Agent">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -759,7 +759,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AgentPriorityHistory">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.AgentPriorityHistory">
+            <EntityTypeMapping TypeName="AgentsModel.AgentPriorityHistory">
               <MappingFragment StoreEntitySet="AgentPriorityHistory">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AgentID" ColumnName="AgentID" />
@@ -769,7 +769,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AgentType">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.AgentType">
+            <EntityTypeMapping TypeName="AgentsModel.AgentType">
               <MappingFragment StoreEntitySet="AgentType">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -778,7 +778,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Material">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.Material">
+            <EntityTypeMapping TypeName="AgentsModel.Material">
               <MappingFragment StoreEntitySet="Material">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -794,7 +794,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MaterialCountHistory">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.MaterialCountHistory">
+            <EntityTypeMapping TypeName="AgentsModel.MaterialCountHistory">
               <MappingFragment StoreEntitySet="MaterialCountHistory">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
@@ -804,7 +804,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MaterialType">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.MaterialType">
+            <EntityTypeMapping TypeName="AgentsModel.MaterialType">
               <MappingFragment StoreEntitySet="MaterialType">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -813,7 +813,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.Product">
+            <EntityTypeMapping TypeName="AgentsModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -828,7 +828,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductCostHistory">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.ProductCostHistory">
+            <EntityTypeMapping TypeName="AgentsModel.ProductCostHistory">
               <MappingFragment StoreEntitySet="ProductCostHistory">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -838,7 +838,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductMaterial">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.ProductMaterial">
+            <EntityTypeMapping TypeName="AgentsModel.ProductMaterial">
               <MappingFragment StoreEntitySet="ProductMaterial">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
@@ -847,7 +847,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductSale">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.ProductSale">
+            <EntityTypeMapping TypeName="AgentsModel.ProductSale">
               <MappingFragment StoreEntitySet="ProductSale">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AgentID" ColumnName="AgentID" />
@@ -858,7 +858,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductType">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.ProductType">
+            <EntityTypeMapping TypeName="AgentsModel.ProductType">
               <MappingFragment StoreEntitySet="ProductType">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -867,7 +867,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shop">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.Shop">
+            <EntityTypeMapping TypeName="AgentsModel.Shop">
               <MappingFragment StoreEntitySet="Shop">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -877,7 +877,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Supplier">
-            <EntityTypeMapping TypeName="WorldSkills_First_DemoModel.Supplier">
+            <EntityTypeMapping TypeName="AgentsModel.Supplier">
               <MappingFragment StoreEntitySet="Supplier">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -888,7 +888,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="MaterialSupplier" TypeName="WorldSkills_First_DemoModel.MaterialSupplier" StoreEntitySet="MaterialSupplier">
+          <AssociationSetMapping Name="MaterialSupplier" TypeName="AgentsModel.MaterialSupplier" StoreEntitySet="MaterialSupplier">
             <EndProperty Name="Material">
               <ScalarProperty Name="ID" ColumnName="MaterialID" />
             </EndProperty>
