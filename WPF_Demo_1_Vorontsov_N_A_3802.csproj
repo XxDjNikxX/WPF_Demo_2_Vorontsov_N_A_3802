@@ -328,6 +328,7 @@
       <DependentUpon>ModelAgents.edmx</DependentUpon>
       <LastGenOutput>ModelAgents.cs</LastGenOutput>
     </Content>
+    <Content Include="WS_Var_1_Vorontsov.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
