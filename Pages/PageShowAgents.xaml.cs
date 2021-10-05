@@ -25,16 +25,26 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802.Pages
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Подгрузка данных в БД, при загрузке страницы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            lbAgents.ItemsSource = DBModel.DB.Agent.ToList(); //Подгрузка данных в БД
+            
+             lbAgents.ItemsSource = DBModel.DB.Agent.ToList(); 
 
-           // if(DBModel.DB.Agent.Find) /*Work In Progress*/
         }
 
+        /// <summary>
+        ///  Реализация поиска данных по БД в поисковой строке, при её изменении
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            lbAgents.ItemsSource = DBModel.DB.Agent.Where(x => x.Title.StartsWith(tbSearch.Text)).ToList(); // Реализация поиска данных по БД в поисковой строке
+            lbAgents.ItemsSource = DBModel.DB.Agent.Where(x => x.Title.StartsWith(tbSearch.Text)).ToList(); 
         }
     }
 }
