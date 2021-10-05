@@ -27,14 +27,14 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            lbAgents.ItemsSource = DBModel.DB.Agent.ToList();
+            lbAgents.ItemsSource = DBModel.DB.Agent.ToList(); //Подгрузка данных в БД
 
-            if(DBModel.DB.Agent.Find)
+           // if(DBModel.DB.Agent.Find) /*Work In Progress*/
         }
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            lbAgents.ItemsSource = DBModel.DB.Agent.Where(x => x.Title.StartsWith(tbSearch.Text)).ToList();
+            lbAgents.ItemsSource = DBModel.DB.Agent.Where(x => x.Title.StartsWith(tbSearch.Text)).ToList(); // Реализация поиска данных по БД в поисковой строке
         }
     }
 }
