@@ -29,7 +29,7 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802.Pages
         {
             lbAgents.ItemsSource = DBModel.DB.Agent.ToList();
 
-            if(DBModel.DB.Agent.Find)
+          //  if(DBModel.DB.Agent.Find)
         }
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
