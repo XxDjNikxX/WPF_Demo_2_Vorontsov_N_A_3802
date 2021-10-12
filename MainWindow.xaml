@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_Demo_1_Vorontsov_N_A_3802"
         xmlns:Icon="/img/Попрыжонок.ico"
         mc:Ignorable="d"
-        Title="Попрыжонок" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="Попрыжонок" Height="450" Width="800" Loaded="Window_Loaded" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".2*"/>
