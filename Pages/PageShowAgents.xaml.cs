@@ -104,16 +104,19 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802.Pages
                     lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "МКК").ToList();
                     break;
                 case 2:
+                    lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "ОАО").ToList();
                     break;
                 case 3:
+                    lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "ООО").ToList();
                     break;
                 case 4:
+                    lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "ЗАО").ToList();
                     break;
                 case 5:
+                    lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "МФО").ToList();
                     break;
                 case 6:
-                    break;
-                case 7:
+                    lbAgents.ItemsSource = DBModel.DB.Agent.Where(u => u.AgentType.Title == "ПАО").ToList();
                     break;
             }
         }
