@@ -10,7 +10,11 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802
     {
         public override string ToString()
         {
-            return Logo + ID + AgentTypeID + Phone + Priority;
+            if (string.IsNullOrEmpty(Logo) || string.IsNullOrWhiteSpace(Logo))
+            {
+                return Logo = @"\img\picture.png";
+            }
+            else return Logo;
         }
     }
 }
