@@ -8,13 +8,16 @@ namespace WPF_Demo_1_Vorontsov_N_A_3802
 {
     partial class Agent
     {
-        public override string ToString()
+        public string EmptyStringToLogo
         {
-            if (string.IsNullOrEmpty(Logo) || string.IsNullOrWhiteSpace(Logo))
+            get
             {
-                return Logo = @"\img\picture.png";
+                if (string.IsNullOrEmpty(Logo) || string.IsNullOrWhiteSpace(Logo))
+                {
+                    return @"\img\picture.png";
+                }
+                else return Logo;
             }
-            else return Logo;
         }
     }
 }
